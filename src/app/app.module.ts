@@ -6,19 +6,26 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule   } from "@angular/forms";
 import { SignupComponent } from './signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { Mainpage1Component } from './mainpage1/mainpage1.component';
+
 
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    MainpageComponent,
+    Mainpage1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

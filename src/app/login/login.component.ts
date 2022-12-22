@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { RequestResponseService } from '../request-response.service';
+import { RequestResponseService } from '../request-response.service';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 import { Logindetails } from "../logindetails";
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     captchaCode: new FormControl('')
   })
   // message1: string;
-  constructor( private formbuilder: FormBuilder, public router: Router) { }
+  constructor( private service: RequestResponseService,private formbuilder: FormBuilder, public router: Router) { }
 
   ngOnInit(): void {
     this.refreshCaptcha();
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formbuilder.group(
       {
         username: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]],
-        password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)],],
+        password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
         captchaCode: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]]
       },
     );
@@ -56,9 +56,9 @@ export class LoginComponent implements OnInit {
   }
 
   dologin() {
-    // this.service.dologin(this.logindetails).subscribe(captchaResponse => {
-    //   console.log(captchaResponse);
-    // })
+    this.service.dologin().subscribe(data => {
+     console.log(data);
+     })
   }
 
 

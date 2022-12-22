@@ -24,6 +24,13 @@ export class RequestResponseService {
 
   }
  
+  public mainpagedetails(login1:any) {
+    return this.httpClient.post("http://localhost:8080/login", login1, { responseType: 'text' as 'json' });
+  }
+
+  public dologin() {
+    return this.httpClient.post("http://localhost:8080/login", { responseType: 'text' as 'json' });
+  }
 
 }
 

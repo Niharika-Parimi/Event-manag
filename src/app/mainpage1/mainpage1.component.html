@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="with=device-width, initial-scale=1.0">
+        <title>N square Event Management</title>
+        <link rel="stylesheet" href="mainpage1.component.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+        <section class="header">
+
+            <nav>
+                <a href="index.html"><img src="https://pbs.twimg.com/profile_images/580532985793024000/63XCuLlU_400x400.png"></a>
+                
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-close" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">EVENTS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        
+                    </ul>
+
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
+            </nav>
+            <div class="text-box">
+                <h1>India's No.1  Event Planners</h1>
+                <a href="" class="text-button">Contact Us To Get Instant Quote</a>
+            </div>
+        </section>
+
+        <section class="course">
+            <h1>Events We Do</h1>
+            <br>
+            <div class="row">
+                <div class="course-col">
+                    <h3>Festivals</h3>
+                    <img src="../../assets/images/festivals.jpg" alt="Festivals">
+                </div>
+                <div class="course-col">
+                    <h3>Marriages</h3>
+                    <img src="../../assets/images/wedding.jpg" alt="">
+                </div>
+                
+
+            </div>
+            <div class="row">
+                <div class="course-col">
+                    <h3>Coorporate Events</h3>
+                    <img src="../../assets/images/corporate-events.webp" alt="">
+                </div>
+                <div class="course-col">
+                    <h3>Parties</h3>
+                    <img src="../../assets/images/event-party.jpg" alt="">
+                </div>
+            </div>
+        
+        
+        
+        </section>
+
+<section class="campus">
+    <h1>
+        Our High Rated Designs
+    </h1>
+    <br>
+    <div class="row">
+        <div class="campus-col">
+            <img src="../../assets/images/Highrated1.jpg" alt="High rated1">
+            <h3>Excellent</h3>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+        </div>
+        <div class="campus-col">
+            <img src="../../assets/images/Highrated2.jpeg" alt="High rated2">
+            <h3>Good</h3>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o">
+        </i>
+        
+        </div><div class="campus-col">
+            <img src="../../assets/images/Highrated3.png" alt="High rated3">
+            <h3>Nice</h3>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o">
+        </i>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    
+    <h2>Decorate your big day within your budget</h2>
+
+    <div class="container">
+       <br>
+   <label>Name:  &nbsp; </label>
+    <input type="text" formControlName='username'>
+    <span style="color:red" *ngIf="username && username.invalid && username.touched"> This field is required</span>
+    <br>
+    <label>Phone: &nbsp;  </label>
+    <input type="text" formControlName='phone'>
+    <span style="color:red" *ngIf="phone && phone.invalid && phone.touched"> This field is required</span>
+    <br>
+    <label>Email: &nbsp; </label>
+    <input type="text" formControlName='email'>
+    <span style="color:red" *ngIf="email && email.invalid && email.touched"> Enter valid email</span>
+    <br>
+    <label>Date: &nbsp; </label>
+    <input type="text" formControlName='date'>
+    <span style="color:red" *ngIf="date && date.invalid && date.touched"> This field is required</span>
+    <br>
+    <label>Venue: &nbsp; </label>
+    <input type="text" formControlName='venue'>
+    <span style="color:rgb(241, 134, 134)" *ngIf="venue && venue.invalid && venue.touched"> This field is required</span>
+
+    <br>
+    <button [disabled]="loginForm.invalid" type="submit" class="quote">Get Your Quote</button>
+
+
+    </div>
+   
+</section>
+
+
+<section class="reviews">
+    <h1>Reviews from our clients</h1>
+    <br>
+    <div class="row">
+        <div class="reviews-col">
+            <img src="../../assets/images/user1.jpg">
+            <div>
+                <p>
+                    NSquare Event management is constantly evolving with their customers at the forefront of their changes and always keeping customer needs on their mind. The customer support is amazing.
+                </p>
+                <h3>Niharika</h3>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star-half-o" ></i>
+
+            </div>
+        </div>
+        <div class="reviews-col">
+            <img src="../../assets/images/user2.jpg">
+            <div>
+                <p>
+                    I love the quick support that Nsquare Event supplies. Their support staff is quick to respond and extremely helpful. I also love the updated format of the event sites, they look much more modern and that helps with our sale to clients to use this software.                </p>
+                <h3>Nikhil Kumar</h3>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+<section class="cta">
+    <h1>Enroll for various events from any <br> where in the world  </h1>
+    <a href="" class="text-button1">CONTACT US</a>
+</section>
+
+
+<section class="footer">
+<h4>
+    About Us
+</h4>
+<p>
+    We love to do Events
+</p>
+
+<div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+
+</div>
+</section>
+        <script>
+            var navLinks=document.getElementById("navLinks");
+
+            function showMenu()
+            {
+                navLinks.style.right="0";
+            }
+            function hideMenu()
+            {
+                navLinks.style.right="-200px";
+            }
+        </script>
+    </form>
+    </body>
+</html>
