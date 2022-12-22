@@ -1,0 +1,48 @@
+<div class="body">
+    <div class="blueBox">
+        <img class="rbiLogo" src="../../assets/images/Tailoring.webp" alt="rbilogoimage" width="300px">
+        <div class="rbiHead">Cloud Tailoring</div>
+        <div class="rbiSubHead"></div>
+    </div>
+    <div class="whiteBox">
+        
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+                <div >
+                    <div class="jumbotron text-center">
+                        <br><br><br>
+                     <h1>Welcome, login to your account</h1><br><br><br><br>
+                        
+                    </div>
+                    <div><h4>UserName</h4></div>
+                    <input class="input is-medium form-control textbox" formControlName='username'
+                        placeholder="Enter Username"    type="textbox">
+                    <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['username'].errors && f['username'].errors['required']">User Name is
+                            required</div>
+                        <div *ngIf="f['username'].errors && f['username'].errors['minlength']">Name should
+                            have atleast 6 characters</div>
+                    </div>
+                    <br>
+                    <div ><h4>Password</h4></div>
+                    <input class="input is-medium form-control textbox" formControlName='password'
+                        placeholder="Enter password"  type="password">
+                    <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                        <div *ngIf="submittedform && f['password'].errors && f['password'].errors['required']">
+                            Password is required</div>
+                        <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Password
+                            should have atleast 6 characters</div>
+                    </div>
+                    <br>
+                    <div >Forgot Password?</div>
+                    
+                    
+                    
+                    <div class="buttons">
+                        <button type="submit" routerLink="/signup" class="loginButton">Login</button>
+                        <button class="registerButton" routerLink="/signup">Register</button>
+                    </div>
+                </div>
+            </form>
+        
+    </div>
+</div>

@@ -1,0 +1,143 @@
+.body {
+    background-color: #3e8ed0;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-self: center;
+    flex-direction: row;
+  }
+  
+  .whiteBox {
+    background-color: #f2f2f2;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    position:relative; 
+    left:80px; 
+    top:60px
+  }
+  
+  .logininfo {
+    background-color: #f2f2f2;
+    width: 700px;
+    height: 800px;
+    margin-left: 320px;
+    box-shadow: 0px 0px 37.4693px rgba(0, 0, 0, 0.1);
+    
+  }
+  .login{
+      margin-left: 30%;
+      margin-bottom: 30px;
+  }
+  .blueBox {
+    background-color: #3e8ed0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  /* .invisible {
+      width: 30%;
+      height: 700px;
+      margin-right: 15%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+  } */
+  
+  .title {
+    margin-top: 95px;
+    font-weight: 600;
+    font-size: 30px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    color: #494949;
+  }
+  .welcome,
+  .username,
+  .password {
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #7e7e7e;
+  }
+  label{
+      margin-top: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #7e7e7e; 
+  }
+  .password {
+    margin-top: 15px;
+  }
+  
+  .forgotpass {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #3e8ed0;
+    margin-left: 25%;
+  }
+  
+  .buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .loginButton {
+    background-color: #3e8ed0;
+    color: white;
+  }
+  
+  .registerButton {
+    background-color: #f2f2f2;
+    color: #3e8ed0;
+    margin-left: 25px;
+  }
+  .refreshButton{
+    background-color: #f2f2f2;
+    color: #3e8ed0;
+    margin-left: 25px;
+    margin-bottom: 20px;
+  
+  }
+  .rbiLogo {
+    position: relative;
+    align-self: center;
+    max-width: 100%;  
+    height: auto; 
+  }
+  
+  .rbiHead,
+  .rbiSubHead {
+    text-align: center;
+  
+    font-weight: 700;
+    font-size: 30px;
+    color: #f2f2f2;
+    line-height: 54px;
+  }
+  
+  .rbiSubHead {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 14px;
+  }
+  .captchaImage{
+    margin-top: 1px;
+    transform: translate(10px, 20);
+    border-radius: 10px;
+    color: #3e8ed0;
+    margin-bottom: auto;
+  }
+  .Refresh{
+    height: 50px;
+    width: 50px;
+    background-color: #f2f2f2;
+    color: #3e8ed0;
+    margin-left: 10px;
+   
+  }

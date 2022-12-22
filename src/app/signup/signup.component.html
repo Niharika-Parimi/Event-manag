@@ -1,0 +1,75 @@
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="registerNow(registerForm)">
+        <div class="whiteBox">
+            <div class="container1">
+                <h1 class="title">Registration Form</h1>
+            </div>
+
+            <progress class="progress is-primary" value="75" max="100">3/4</progress>
+
+            <div class="container2">
+
+                <div class="diva">
+
+                    <div class="password form-control ">Name of Individual</div>
+                    <input class="input is-medium form-control textbox" type="text" name="name" formControlName="name"
+                        >
+                    <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required</div>
+                    </div>
+
+                    <div class="password form-control ">Address Line 1 </div>
+                    <input class="input is-medium form-control textbox" type="text" formControlName="address1"
+                        name="address1" >
+                    <div *ngIf="f['address1'].touched && f['address1'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['address1'].errors && f['address1'].errors['required']">Address is required</div>
+                        <div *ngIf="f['address1'].errors && f['address1'].errors['minlength']">Please enter valid Address </div>
+                        <div *ngIf="f['address1'].errors && f['address1'].errors['maxlength']">Address can contain only 30 characters </div>
+                    </div>
+
+                    <div class="password form-control ">PIN Code</div>
+                    <input class="input is-medium form-control textbox " type="number" formControlName="pincode"
+                        name="pincode" >
+
+                    <div *ngIf="f['pincode'].touched && f['pincode'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['pincode'].errors && f['pincode'].errors['required']">Pincode is required</div>
+                        <div *ngIf="f['pincode'].errors && f['pincode'].errors['minlength']">Pincode must have 6 characters </div>
+                        <div *ngIf="f['pincode'].errors && f['pincode'].errors['maxlength']">Pincode must have 6 characters</div>
+                    </div>
+
+                    <div class="password form-control ">Activity code of IP</div>
+                    <input class="input is-medium form-control textbox" type="number" formControlName="actcode"
+                        name="actcode" >
+                    <img src="../../assets/icons/search.jpg" (click)="search()" />
+                    <div *ngIf="f['actcode'].touched && f['actcode'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['actcode'].errors && f['actcode'].errors['required']">Activity code is required</div>
+                        <div *ngIf="f['actcode'].errors && f['actcode'].errors['minlength']">Code must have 3 characters</div>
+                        <div *ngIf="f['actcode'].errors && f['actcode'].errors['maxlength']">Code must have 3 characters </div>
+                    </div>
+
+                    <div class="password form-control ">Contact Person </div>
+                    <input class="input is-medium form-control textbox" type="text" formControlName="contactperson"
+                        name="contactperson" >
+                    <div *ngIf="f['contactperson'].touched && f['contactperson'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['contactperson'].errors && f['contactperson'].errors['required']">Contact Person
+                            is required</div>
+                    </div>
+
+                </div>
+                
+
+
+            </div>
+
+        </div>
+
+
+        <div class="buttons1">
+            <div class="back">
+                <a href="/Login">
+                    < Back</a>
+                        <button class="registerButton password form-control" type="submit">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
